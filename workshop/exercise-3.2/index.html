@@ -2,10 +2,38 @@
 <html>
   <head>
     <title>Exercise 3.2</title>
-    <style></style>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+
+      .main {
+        position: absolute;
+        left: 35%;
+        top: 15%;
+      }
+
+      button {
+        padding: 20px 60px;
+        margin: 0 10px;
+      }
+
+      .timer {
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        font-size: 3em;
+      }
+    </style>
   </head>
   <body>
-    <div class="main" id="main"></div>
+    <div class="main" id="main">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+    </div>
+    <p class="timer" id="timer"></p>
     <script src="app.js"></script>
   </body>
 </html>
