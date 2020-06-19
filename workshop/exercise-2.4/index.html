@@ -2,10 +2,61 @@
 <html>
   <head>
     <title>Exercise 2.4</title>
-    <style></style>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .main {
+        background-color: lightgrey;
+        height: 500px;
+        width: 50%;
+        margin: auto;
+      }
+
+      .start {
+        position: absolute;
+        top: 10%;
+        left: 45%;
+        padding: 20px 50px;
+        background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        color: white;
+        cursor: pointer;
+        transition: all ease 2s;
+      }
+
+      .start:hover {
+        background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+      }
+
+      .counter {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        font-size: 4em;
+        color: black;
+      }
+
+      .loseOrWin {
+        position: absolute;
+        top: 40%;
+        left: 37%;
+        width: 300px;
+        height: 200px;
+        display: none;
+      }
+    </style>
   </head>
   <body>
+    <button class="start" id="startButton">Start</button>
+    <p class="counter" id="counter"></p>
     <div class="main" id="main"></div>
+    <div class="loseOrWin" id="loseOrWin"><p id="loseOrWinMsg"></p></div>
     <script src="app.js"></script>
   </body>
 </html>
